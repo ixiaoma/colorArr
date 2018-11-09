@@ -6,4 +6,21 @@
 	</head>
 	<body>
 	</body>
+	<script>
+		function getItemColors (colorLevel) { 
+		  var colors= []; 
+		  //默认的最深颜色 
+		  var red = 134,green = 108, blue = 184; 
+		  //最浅颜色是239,239,239 比如：最浅颜色的red是 239 则差值为239-134=105 
+		  var maxRed = 105,maxGreen = 131,maxBlue = 55; 
+		  var level = colorLevel; 
+		  while(level—) { 
+		    colors.push( 'rgb('+red +','+green+','+blue+')'); 
+		    red += parseInt(maxRed/colorLevel); 
+		    green += parseInt(maxGreen/colorLevel); 
+		    blue += parseInt(maxBlue/colorLevel); 
+		  } 
+		  return colors; 
+		} 
+	</script>
 </html>
